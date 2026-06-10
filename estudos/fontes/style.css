@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+@font-face {
+    font-family: 'android';
+    src: url('../fontes/android.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0:#c5ebd6;
+    --cor1:#83ecba;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --font-padrao: arial, helvetica, Verdana, sans-serif;
+    --font-destaque: 'Kaushan Script', cursive;
+    --font-androide: 'android', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.kaushan-script-regular {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body { /* Corrigido: 'Body' para 'body' minúsculo */
+    background-color: rgb(196, 187, 187); /* Corrigido: 'Background-color' */
+    font-family: var(--font-padrao);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* Corrigido: 'Background-image' */
+    color: white;
+    min-height: 150px; /* Removida a linha duplicada de min-height */
+}
+
+header > h1 {
+    font-family: var(--font-androide); /* Corrigido: '--004' não existia, mudei para a variável da fonte android */
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.267);
+}
+
+header > p {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+nav {
+    background-color: var(--cor5); /* Corrigido: 'Background-color' */
+}
+
+nav > a {
+    color:var(--cor1);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+
+/* Corrigido: adicionei 'nav > a:hover' para o efeito do menu não quebrar o layout global de outros links */
+nav > a:hover {
+    background-color: var(--cor3); /* Corrigido: 'Background-color' */
+    margin-left: 15px;
+    /* Nota: 'width' e 'height' não funcionam em tags 'a' sem 'display: inline-block' ou 'block', mas mantive conforme seu padrão */
+    width: 40px; 
+    height: 60px;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white; /* Corrigido: 'Background-color' */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Corrigido: 'Box-shadow' */
+    border-bottom-left-radius: 10px; /* Corrigido: 'Border-Bottom-left-radius' */
+    border-bottom-right-radius: 10px; /* Corrigido: 'Border-Bottom-right-radius' */
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor0);
+    background-color: rgb(11, 231, 84); /* Corrigido: 'Background-color' */
+    padding: 2px 5px;
+}
+
+main a:hover {
+    background-color: rgb(243, 17, 149); /* Corrigido: 'Background-color' */
+    text-decoration: underline; 
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+main strong {
+    color: var(--cor5);
+    font-weight: bold;
+    padding: 2px 5px;
+}
+
+main h2 {
+    font-family: var(--font-androide);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* Corrigido: 'Background-image' */
+}
+
+main img {
+    width: 100%;
+}
+
+h1 {
+    font-family: var(--font-androide);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+div.video {
+    background-color: var(--cor5); /* Corrigido: 'Background-color' */
+    margin-bottom: 30px; /* Corrigido: 'margin:Bottom' para 'margin-bottom' */
+    margin: 0px -20px 30px -20px; /* Nota: isso anula a linha de cima. Se quiser a margem negativa nas laterais e 30px embaixo, use: margin: 0px -20px 30px -20px; */
+    padding: 20px;
+    padding-bottom: 50%; /* Corrigido: 'Padding-bottom' */
+    position : relative;
+
+
+}
+div.video>iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+footer {
+    background-color: var(--cor5); /* Corrigido: 'Background-color' */
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 5px;
+}
+
+footer > p > a { /* Corrigido: 'fotter' para 'footer' */
+    color: white;
+    text-decoration: underline; /* Corrigido: removido o 'none' duplicado de cima */
+    font-weight: bold;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor1);
+    text-decoration: underline;
+}
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--font-androide);
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+}
+
+img#criadora {
+    max-width: 300px;
+    height: auto; /* Corrigido: '900px auto' é inválido, o correto para responsividade é apenas 'auto' */
+}
+
+.pequena {
+    max-width: 50%;
+    display: block;
+}
+
+aside > h3 {
+    background-color: var(--cor2); /* Corrigido: 'Background-color' */
+    color: white;
+    padding: 5px;
+}
+
+aside {
+    padding: 10px;
+    border-radius: 10px; /* Corrigido: 'Border-radius' */
+}
+
+aside ul {
+    list-style-position: inside;
+    columns: 2;
+}
